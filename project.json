@@ -1,0 +1,10 @@
+{
+    "name": "objTest",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "c",
+    "executable": "objTest.script",
+    "author": "varGeneric",
+    "minimum_firmware_version": 42
+}
