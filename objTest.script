@@ -12,7 +12,16 @@
         syscall(setcursorstarty, itos(50));
         syscall(drawtext, syscall(irrightfront, "")+"  ");
         
-        if (stoi(syscall(irleftfront, ""))<75){
+        if (stoi(syscall(irleftfront, ""))<75 && stoi(syscall(irrightfront, ""))<75){
+            if (stoi(syscall(irleftfront, ""))<stoi(syscall(irrightfront, ""))){
+                syscall(motorleftset,  itos(100));
+            }
+            if (stoi(syscall(irleftfront, ""))>stoi(syscall(irrightfront, ""))){
+                syscall(motorrightset,  itos(100));
+            }
+        }
+        
+        else if (stoi(syscall(irleftfront, ""))<75){
             syscall(motorleftset,  itos(100));
         }
         
