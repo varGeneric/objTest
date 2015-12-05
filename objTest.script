@@ -1,9 +1,9 @@
-str output;
-syscall(cleardisplay, "");
-until(syscall(getbutton,"e") == 1){
+    str output;
+    syscall(cleardisplay, "");
+    until(syscall(getbutton,"e") == 1){
         output = itos(syscall(irleftfront, ""))
         syscall(setcursorstartx, itos(10));
         syscall(setcursorstarty, itos(10));
         syscall(drawtext, "Left Front");
         syscall(drawtext, "");
-}
+    }
