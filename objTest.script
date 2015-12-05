@@ -1,4 +1,5 @@
 str output;
+syscall(cleardisplay, "");
 until(syscall(getbutton,"e") == 1){
         output = itos(syscall(irleftfront, ""))
         syscall(setcursorstartx, itos(10));
