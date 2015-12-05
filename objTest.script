@@ -4,26 +4,28 @@
         syscall(setcursorstarty, itos(10));
         syscall(drawtext, "Left Front: ");
         syscall(setcursorstarty, itos(20));
-        syscall(drawtext, syscall(irleftfront, ""));
+        syscall(drawtext, syscall(irleftfront, "")+"  ");
         
         syscall(setcursorstartx, itos(10));
         syscall(setcursorstarty, itos(40));
         syscall(drawtext, "Right Front: ");
         syscall(setcursorstarty, itos(50));
-        syscall(drawtext, syscall(irrightfront, ""));
+        syscall(drawtext, syscall(irrightfront, "")+"  ");
         
         if (stoi(syscall(irleftfront, ""))<75){
-            syscall(motorleftset,  itos(100));
-            syscall(motorrightset,  itos(0));
-            syscall(delay, itos(150));
+            until(stoi(syscall(irleftfront, ""))!<75){
+                syscall(motorleftset,  itos(100));
+                syscall(motorrightset,  itos(0));
+            }
             syscall(motorleftset,  itos(0));
             syscall(motorrightset,  itos(0));
         }
         
         else if (stoi(syscall(irrightfront, ""))<75){
-            syscall(motorleftset,  itos(0));
-            syscall(motorrightset,  itos(100));
-            syscall(delay, itos(150));
+            until(stoi(syscall(irleftfront, ""))!<75){
+                syscall(motorleftset,  itos(0));
+                syscall(motorrightset,  itos(100));
+            }
             syscall(motorleftset,  itos(0));
             syscall(motorrightset,  itos(0));
         }
