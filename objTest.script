@@ -2,6 +2,7 @@
     until(syscall(getbutton,"e") == 1){
         syscall(setcursorstartx, itos(10));
         syscall(setcursorstarty, itos(10));
-        syscall(drawtext, "Left Front");
+        syscall(drawtext, "Left Front: ");
+        syscall(setcursorstarty, itos(10));
         syscall(drawtext, syscall(irleftfront, ""));
     }
