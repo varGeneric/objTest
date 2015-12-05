@@ -28,5 +28,10 @@
             syscall(motorrightset,  itos(0));
         }
         
-        else if (stoi(syscall(irrightfront, ""))>75 && stoi(syscall(irleftfront, ""))<75)
+        else if (stoi(syscall(irrightfront, ""))>75 && stoi(syscall(irleftfront, ""))<75){
+            syscall(motorleftset,  itos(50));
+            syscall(motorrightset,  itos(50));
+            syscall(delay, itos(70));
+        }
+        }
     }
