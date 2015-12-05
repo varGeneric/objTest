@@ -13,8 +13,8 @@
         syscall(drawtext, syscall(irrightfront, "")+"  ");
         
         if (stoi(syscall(irleftfront, ""))<75){
+            syscall(motorleftset,  itos(100));
             until(stoi(syscall(irleftfront, ""))>75){
-                syscall(motorleftset,  itos(100));
                 syscall(motorrightset,  itos(0));
             }
             syscall(motorleftset,  itos(0));
@@ -22,9 +22,9 @@
         }
         
         else if (stoi(syscall(irrightfront, ""))<75){
+            syscall(motorrightset,  itos(100));
             until(stoi(syscall(irleftfront, ""))>75){
                 syscall(motorleftset,  itos(0));
-                syscall(motorrightset,  itos(100));
             }
             syscall(motorleftset,  itos(0));
             syscall(motorrightset,  itos(0));
