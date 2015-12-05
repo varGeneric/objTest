@@ -15,12 +15,12 @@
         if (stoi(syscall(irleftfront, ""))<75){
             syscall(motorleftset,  itos(100));
             syscall(motorrightset,  itos(0));
-            syscall(delay, itos(3000));
+            syscall(delay, itos(100));
         }
         
         if (stoi(syscall(irrightfront, ""))<75){
             syscall(motorleftset,  itos(0));
             syscall(motorrightset,  itos(100));
-            syscall(delay, itos(3000));
+            syscall(delay, itos(100));
         }
     }
